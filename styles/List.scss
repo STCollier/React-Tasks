@@ -1,0 +1,118 @@
+$primary: #FEFBF3; /*White*/
+$secondary: #F8F0DF; /*Beige*/
+
+$beige1: #DFD3C3;
+$beige2: #D0B8A8;
+$beige3: #7D6E83;
+
+$black: #121212;
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Dancing+Script&family=Kanit&display=swap');
+
+html, body {
+  width: 100%;
+  height: 100%;
+  background-color: $primary;
+}
+
+.title {
+  font-family: 'Caveat', cursive;
+  font-size: 48px;
+  margin: 0;
+  padding: 15px 0 25px 0;
+  color: $black;
+}
+
+.list-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Kanit', sans-serif;
+}
+
+.list {
+  text-align: center;
+  background-color: $secondary;
+  width: 50vw;
+  height: 75vh;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  border-radius: 10px;
+  padding: 15px;
+  overflow-y: auto;
+}
+
+.list-input {
+  border: none;
+  -webkit-appearance: none;
+  -ms-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: $beige1;
+  padding: 12px;
+  border-radius: 3px;
+  width: 50%;
+  font-size: 14px;
+}
+
+.listItemContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.listItem.starred {
+  font-weight: bold;
+}
+
+.listItem {
+  vertical-align: middle;
+  width: 50%;
+  padding: 0px 25px 0px 25px;
+}
+
+.itemli {
+  float: left;
+  max-width: 18vw;
+}
+
+.star, .trash {
+  float: right;
+  padding: 3px;
+  color: $black;
+  cursor: pointer;
+}
+
+.star:hover {
+  color: $beige3;
+}
+
+.trash:hover {
+  color: #B73E3E;
+}
+
+.star.starred {
+  color: #FECD70
+}
+
+.noTasksReminder {
+  font-family: 'Caveat', cursive;
+  font-size: 25px;
+  padding-top: 100px;
+  color: $beige2;
+  
+  .noTasks {
+    -webkit-transform: rotate(5deg);
+    margin: 0;
+  }
+  
+  .addOne {
+    -webkit-transform: rotate(-5deg);
+  }
+}
+
+@media screen and (max-height: 750px) {
+  .noTasksReminder {
+    font-size: 20px;
+    padding-top: 50px;
+  }
+}
